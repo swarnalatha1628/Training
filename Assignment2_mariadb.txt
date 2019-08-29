@@ -1,0 +1,8 @@
+1.select * from emp where ename like 'A%';
+2.select ename from emp where mgr=0;
+3.select empno,ename,sal from emp where sal between 1200 and 1400;
+4.
+5.
+6.select count(*) from emp where job='CLERK' group by job;(select count(job) as 'clerk count' from emp where job='clerk';)
+7.select job,avg(sal),count(job) from emp group by job;
+8.

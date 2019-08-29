@@ -1,0 +1,100 @@
+1. select customer_name from customer;
+ans:
++---------------+
+| customer_name |
++---------------+
+| Adams         |
+| Brooks        |
+| Curry         |
+| Glenn         |
+| Green         |
+| Hayes         |
+| Johnson       |
+| Jones         |
+| Lindsay       |
+| Smith         |
+| Turner        |
+| Williams      |
++---------------+
+2.select distinct branch_name from loan;
+ans:+-------------+
+| branch_name |
++-------------+
+| Round Hill  |
+| Downtown    |
+| Perryridge  |
+| Redwood     |
+| Mianus      |
++-------------+
+3.select * from branch;
+ans:
++-------------+-------------+---------+
+| branch_name | branch_city | assets  |
++-------------+-------------+---------+
+| Brighton    | Brooklyn    | 7100000 |
+| Downtown    | Brooklyn    | 9000000 |
+| Mianus      | Horseneck   |  400000 |
+| North Town  | Rye         | 3700000 |
+| Perryridge  | Horseneck   | 1700000 |
+| Pownal      | Bennington  |  300000 |
+| Redwood     | Palo Alto   | 2100000 |
+| Round Hill  | Horseneck   | 8000000 |
++-------------+-------------+---------+
+4.select account_number from account where balance > 700;
+ans:
++----------------+
+| account_number |
++----------------+
+| A-201          |
+| A-217          |
++----------------+
+5.select account_number,balance from account where branch_name = 'Brighton' and balance>800;
++----------------+---------+
+| account_number | balance |
++----------------+---------+
+| A-201          |     900 |
++----------------+---------+
+6.select branch_name,assets as 'assets in thousands' from branch where  assets>1000;
+ans:
++-------------+---------------------+
+| branch_name | assets in thousands |
++-------------+---------------------+
+| Brighton    |             7100000 |
+| Downtown    |             9000000 |
+| Mianus      |              400000 |
+| North Town  |             3700000 |
+| Perryridge  |             1700000 |
+| Pownal      |              300000 |
+| Redwood     |             2100000 |
+| Round Hill  |             8000000 |
++-------------+---------------------+
+7.SELECT branch_name FROM branch WHERE assets BETWEEN 1000000 AND 4000000;
+ans:
++-------------+
+| branch_name |
++-------------+
+| North Town  |
+| Perryridge  |
+| Redwood     |
++-------------+
+8. select a.account_number,d.customer_name,a.balance from account a,depositor d where a.account_number=d.account_number;
+ans:
++----------------+---------------+---------+
+| account_number | customer_name | balance |
++----------------+---------------+---------+
+| A-102          | Hayes         |     400 |
+| A-102          | Johnson       |     400 |
+| A-201          | Johnson       |     900 |
+| A-217          | Jones         |     750 |
+| A-222          | Lindsay       |     700 |
+| A-215          | Smith         |     700 |
+| A-305          | Turner        |     350 |
++----------------+---------------+---------+
+9. select a.account_number,d.customer_name,a.balance from account a,depositor d where a.account_number=d.account_number and a.balance<400;
+ans:
++----------------+---------------+---------+
+| account_number | customer_name | balance |
++----------------+---------------+---------+
+| A-305          | Turner        |     350 |
++----------------+---------------+---------+
+

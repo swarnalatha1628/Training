@@ -1,0 +1,12 @@
+1.Write a script for finding the sum of used memory of RAM and Swap.
+
+ 
+
+2.What is the syntax for setting the crontab to work on every Wednesday at 6 a.m?
+
+ 
+
+3.Install mailutils and set the configurations for sending mail.
+
+
+

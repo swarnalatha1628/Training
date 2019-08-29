@@ -1,0 +1,8 @@
+<h2 > ***Pay Roll For New Employees***</h2>
+<h3 >These are the way of each employee gets their Salary</h3>
+<div><img src="../../assets/payroll.jpg"></div>
+
+.css
+h2,h3,div{
+    text-align: center;
+}
